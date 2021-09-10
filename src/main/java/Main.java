@@ -18,11 +18,10 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Thread user = new Thread(toy::switched, "User");
-        Thread box = new Thread(toy::switched, "Box");
+        Thread user = new Thread(toy::switchOn, "User");
+        Thread box = new Thread(toy::switchOff, "Box");
 
         user.start();
         box.start();
-
     }
 }
